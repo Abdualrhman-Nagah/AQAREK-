@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    font-family: 'Cairo', sans-serif;
+}
+.contenar{
+    width: 50%;
+    margin: auto;
+} 
+.contenar h1{
+    text-align: center;
+    color: #2C3333;
+    background-color: white;
+}
+a{
+    text-decoration: none;
+}
+/**************************************************/
+.page{
+    height: 100vh;
+
+}
+.page::before{
+    content: "";
+    position: fixed;
+    width: 300%;
+    height: 100%;
+    background-color: #100F0F;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) skew(0deg, -10deg);
+    border-radius: 50%;
+    z-index: -1;
+    animation: waving 3s ease-in-out infinite alternate;
+}
+@keyframes waving {
+    from{
+        transform: translateX(-50%) skew(0deg, -10deg);
+    }
+    to{
+        transform: translateX(-30%) skew(10deg, 0deg);
+    }
+}
+/*********************************************************************/
+.title{
+    width: 100%;
+    text-align: center;
+}
+.title img{
+    width: 250px;
+}
+.title h1{
+    font-family: 'Alfa Slab One', cursive;
+    color: #100F0F;
+    margin-top: -20px;
+    margin-bottom: 25px;
+}
+.title p{
+    font-size: 20px;
+    color: #2C3333;
+}
+/*******************************************************/
+.buttons{
+    margin-top: 50px;
+    width: 100%;
+    display: grid;
+}
+.buttons a{
+    width: 100%;
+    padding: 10px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    color: #100F0F;
+    border-radius: 15px;
+    border: 2px solid #2C3333;
+    background-color: white;
+    box-shadow: inset 0 0 0 0 #100F0F;
+    transition:ease-out 0.3s;
+    outline: none;
+}
+.buttons a:hover{
+    box-shadow: inset 300px 0 0 0 #2C3333;
+    color: white;
+}
+
+.buttons a span{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.buttons a span img{
+    width: 60px;
+    margin-right: 5px;
+}
+.buttons a i{
+    font-size: 22px;
+}
+/*************************************************************************/
+.buttons2{
+    width: 100%;
+    display: grid;
+}
+.buttons2 a{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: white;
+}
+.buttons2 a span i{
+    margin-right: 10px;
+}
+.tw{
+    background-color: #34A2E8;
+}
+.in{
+    background-color: #B14293;
+}
+/**********************************************/
+/*******************************
+*********** text move***********
+********************************/
+.textmove{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.swiper{
+    width: 100%;
+    height: fit-content;
+}
+.swiper-slide{
+    text-align: center;
+}
+.swiper-slide img{
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+}
+.swiper .swiper-button-next , .swiper .swiper-button-prev{
+    color: white
+}
+.swiper .swiper-button-next:hover{
+    color: rgb(119, 112, 92);
+}
+.swiper .swiper-button-prev:hover{
+    color: rgb(119, 112, 92);
+}
+/*************************************
+*************end text move************
+**************************************/
+/**********************************************************/
+.end{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.end span{
+    color: black;
+}
+@media only screen and (max-width:950px){
+    .contenar{
+        width: 100%;
+    } 
+    .contenar h1{
+        font-size: 17px;
+    }
+    .title img{
+        width: 150px;
+    }
+    .title p{
+        font-size: 15px;
+    }
+    .swiper-slide img{
+        width: 100%;
+        height: 400px;
+    }
+}
